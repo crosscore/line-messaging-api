@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.yuu.linenotify</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/yuu/repos/line-messaging-api/venv/bin/python3.12</string>
+        <string>/Users/yuu/repos/line-messaging-api/main.py</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>7</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/yuu/repos/line-messaging-api/line-messaging.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/yuu/repos/line-messaging-api/line-messaging_error.log</string>
+</dict>
+</plist>
