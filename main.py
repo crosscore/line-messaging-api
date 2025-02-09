@@ -2,6 +2,7 @@
 import os
 import random
 import datetime
+import json
 from dotenv import load_dotenv
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
@@ -28,7 +29,8 @@ def send_message(message):
 
 def main():
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))  # set JST
-    messages = os.getenv('MESSAGES').split(',')
+    messages_str = os.getenv('MESSAGES')
+    messages = json.loads(messages_str) # parse json
     send_message(random.choice(messages))
     print(f"message sent: {random.choice(messages)}")
 
